@@ -162,6 +162,11 @@ p{
     width:96vw;
     font-size:0.7em;
     }
+    header input{
+      width: 20vw;
+      height: 2.5vh;
+      display:grid;
+    }
 
   nav{
     width: 96vw
@@ -178,6 +183,7 @@ p{
   }
 body{
   margin:2vw;
+  margin-top: 0;
   position: relative;
   z-index: 3;
 }
@@ -207,6 +213,15 @@ h3{
   width: auto;
   height: auto;
   transform: translate(-70%, -50%);
+}
+
+header{
+  z-index:3;
+  position: relative;
+  width:96vw;
+  top: 0;
+  padding:0;
+  background-color: #bc3931;
 }
 
 }
