@@ -1,0 +1,91 @@
+.contrast{
+visibility: hidden;
+}
+.video{
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+}
+.animation{
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    padding-bottom:0.25em;
+    padding-top: 0.25em;
+    font-size: 1em;
+    text-align: center;
+    width:60vw;
+    background-color: white;
+    font-weight: bold;
+  }
+  h2{
+    text-align: center;
+    font-size: 2em;
+    text-decoration: underline;
+  }
+  h3{
+    text-align: center;
+    font-size: 1.5em;
+    margin: 2em;
+    text-decoration: underline;
+  }
+  p{
+      text-align:inherit;
+  }
+
+  body {
+    margin: 20vw;
+    margin-top: 5vw;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 2em;
+    color: black;
+  }
+
+  nav{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+    width: 60vw;
+  }
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0  ;
+      float:center;
+    }
+    li a {
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 0.9em 1em;
+      }
+    a{
+      color: black;
+    }
+    title{
+      text-align: center;
+
+    }
+    header{
+      z-index: 4;
+      position: fixed;
+      top: 0;
+      padding-bottom:0.5vh;
+      padding-top: 0.5vh;
+      background-color:white;
+      width:100vw;
+    }
+    input{
+      width: 10em;
+      height: 5em;
+    }
+    header input:first-child{
+      margin-left: 22.5vw;
+      margin-right: 0.25vw;
+    }

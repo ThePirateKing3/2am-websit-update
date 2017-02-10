@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang = "en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Litriture Review</title>
+  <link rel="stylesheet" href="style.css" title="Normal">
+  <link rel="alternate stylesheet" type="text/css" href="altstyle.css" title="Alternative">
+</head>
+<header>
+  <form>
+    <input type="submit" onclick="switch_style('Normal');return false;" name="theme" value="Defult" id="blue">
+    <input type="submit" onclick="switch_style('Alternative');return false;" name="theme" value="Acssesability" id="pink">
+  </form>
+</header>
+<body onload="set_style_from_cookie()">
+<div class="contrast"></div>
+<h1>Literature Review</h1>
+<video class="video" autoplay loop muted poster ="media/back.png">
+  <source src="media/background.mp4" type="video/mp4">
+  <source src="media/background.ogv" type="video/ogv">
+  <source src="media/background.webm" type="video/webm">
+  <p>Background video of the london eye</p>
+</video>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="discoverylog.html">Discovery Log</a></li>
+      <li><a href="literaturereview.html" class="active">Literature Review</a></li>
+      <li><a href="otherstuff.html">Other Stuff</a></li>
+    </ul>
+  </nav>
+<h2>
+  Mitigating personal information exposure on the web
+</h2>
+
+  <p>With the increase in prevalence of free and public Wi-Fi networks that use little or no encryption there is a more tangible threat to personal information being exposed (Wetherall, et al., 2009), using such techniques as 'man in the middle' attacks or 'route of spoofing' (Consolvo, et al., 2010; Watts, 2016). Looking at the situation, three main areas have been identified where a user's risk can be reduced. First being to increase the user's awareness of such techniques as those mentioned above (Consolvo, et al., 2010). Second to increase the ease of which these techniques can be used (Watts, 2016). Third to use end-to-end encryption for all traffic (Cheng, Wang, Cheng, Mohapatra, & Seneviratne, 2013; Borisov, Goldberg, & Wagner, 2001).
+<h3>
+  Increasing user's awareness
+</h3>
+  <p>Studies have investigated what understanding is useful when trying to find out what can cause the exposure of personal information. These studies have agreed that the broadcast nature of Wi-Fi means that potentially transmissions can be received and read by intercepting devices (Wetherall, et al., 2009). Most users are not aware of this fact and believe that their data is sent directly to its destination (Wetherall, et al., 2009). As users have this perception, they cannot understand how the information could be intercepted while in transit.
+  <p>A study by Friedman et al shows that half of participants could correctly identify a secure connection when shown a screenshot of a web browser. The study then moves on to suggest that web browsers need to be better designed to make it easier for the user to have an accurate understanding of whether they are using a secure connection or not (Friedman, Hurley, Howe, Felten, & Nissenbaum, 2002). This study used 72 participants, 24 from rural, urban and high-tech communities. This is a rather small sample size, although the diversity of the study reveals useful data about the understanding of different people in different communities.
+  <p>Consolvo et al developed a program to tell users whether, and by what means, a network is encrypted.  The program also looks for unsecured networks and then detects certain types of data about to be transmitted by using a reference list of terms. If a term is about to be sent then it drops the connection to the unsecured wireless network (Consolvo, et al., 2010). This paper also shows that having the program running makes users more aware of their exposure on networks and helps to change their behaviour when using Wi-Fi (Consolvo, et al., 2010).
+<h3>
+  Practicalities
+</h3>
+  <p>Reports show that even though there are protection techniques available for 802.11-based wireless networks such as WEP, WPA or WPA 2 encryption, these tools are not used widely on public access points (Cheng, Wang, Cheng, Mohapatra, & Seneviratne, 2013). This could be because the provider is only providing public access points to draw people in to their business, meaning they have little interest in user security and so the matter it is not considered in their IT security risk assessment.
+  <p>Although Borisov, Goldberg and Wagner show some techniques exploiting the key stream reuse to read encrypted traffic in the WEP encryption type. Another technique was discussed with the ability to modify, intercept or injection into the message in transit, without being detected by the check sum (Borisov, Goldberg, & Wagner, 2001). Although these attacks can be used on WEP encryption it is still a better proposition than leaving a network unencrypted.
+  <p>Watts suggests that the use of two-factor authentication can be used to build a zero-knowledge security system (Watts, 2016). What he does not make clear is how the security system would be built using two-factor authentication. From Watts' suggestions, a onetime pass code could be used to encrypt data to a server run by the access point provider, and then data forwarded on to the correct destination. This would remove the problem from the initial access point, but the encryption server would become a target for attacks as there will be large amounts of personal data passing through it. Could a provider such as O2 or BT do something similar in their public network?
+<h3>
+  Encryption
+</h3>
+  <p>Although considered the best way to secure one's personal information while using public Wi-Fi, the virtual private network (VPN) is used very little by users on public Wi-Fi (Consolvo, et al., 2010). Despite the increase in security provided, users may not choose a VPN as most services are commercial and require subscription. This increases the barrier to entry as well as the fact that naive users may find a VPN difficult to set up (Cheng, Wang, Cheng, Mohapatra, & Seneviratne, 2013). Although recently new VPN services have been created that run as browser extensions, which can make connecting to the network a lot easier for the new, naive users.
+  <p>The most common encryption used on the Internet is HTTPS mainly used to verify end-to-end privacy and authenticity ( Satyajit, Kang, Michael, & Frank, 2009). As well as being used to encrypt personal information that is sent to servers, it could be extended to encrypt all web traffic.
+  <p>However, if all, or some, users on a network using any form of encryption or VPN the network traffic will increase and possibly cause the network to become saturated. There don't seem to be many journal articles discussing this and it is a possible area for research.
+  <p>In relation to whether it would slow the computer down, an article from the Intel Technology Journal says that the new architecture of Intel CPUs (i7 series) will increase performance for encryption and decryption by reintroducing its multithreading technology ( Satyajit, Kang, Michael, & Frank, 2009). This would increase the encryption speed for the user's computer if it is using the chip.
+<h3>
+  Conclusion
+</h3>
+  <p>Educating the user is an important focus point in mitigating personal information exposure from use of public Wi-Fi. It could be an interesting research topic to investigate whether the current standard of networking devices used for public Wi-Fi could hold up to the increase in traffic if users started using a VPN or encryption. We should be encouraging providers to advertise the fact that they use basic forms of encryption on their wireless networks or encouraging them to use the already set-up networks such as O2's or BT's.
+<h3 id="references">
+  References
+</h3>
+  <p class="references"> Satyajit, G., Kang, X., Michael, K., & Frank, B. (2009). https://everywhere! ENCRYPTING THE INTERNET. Intel Technology Journal, 66-79.
+  <p class="references"> Borisov, N., Goldberg, I., & Wagner, D. (2001). Intercepting Mobile Communications:the insecurity of 802.11. Conference on Mobile Computing and Networking (pp. 180-189). Tome, Italy: ACM New York.
+  <p class="references"> Cheng, N., Wang, X. O., Cheng, W., Mohapatra, P., & Seneviratne, A. (2013). Characterizing privacy leakage of public WiFi networks for users on travel. INFOCOM, 2013 Proceedings IEEE. Torino: IEEE.
+  <p class="references"> Consolvo, S., Jung, J., Greenstein, B., Powledge, P., Maganis, G., & Avrahami, D. (2010). The Wi-Fi privacy ticker: improving awareness & control of personal information exposure on Wi-Fi. UbiComp '10, 321-330.
+  <p class="references"> Friedman, B., Hurley, D., Howe, D. C., Felten, E., & Nissenbaum, H. (2002). Users' conceptions of web security: a comparative study. CHI EA '02, 746-747.
+  <p class="references"> Watts, S. (2016). Secure authentication is the only solution for vulnerable public wifi. Computer Fraud & Security, 18-20.
+  <p class="references"> Wetherall, D., LeGrand, L., Klasnja, P., Consolvo, S., Jung, J., Greenstein, B., & Powledge, P. (2009). "When I am on Wi-Fi, I am fearless": privacy concerns & practices in eeryday Wi-Fi use. CHI '09, 1993-2002.
+<footer>
+  <a href="https://www.videvo.net/video/timelapse-of-the-london-eye-at-night/5435">Backgroud video</a>
+  <a href="http://validator.w3.org/check?uri=referer">W3 validator</a>
+</footer>
+</body>
+
+<script lang="Javascript">
+// *** TO BE CUSTOMISED ***
+
+var style_cookie_name = "style" ;
+var style_cookie_duration = 10 ;
+var style_domain = "" ;
+
+// *** END OF CUSTOMISABLE SECTION ***
+// You do not need to customise anything below this line
+
+function switch_style ( css_title )
+{
+// You may use this script on your site free of charge provided
+// you do not remove this notice or the URL below. Script from
+// https://www.thesitewizard.com/javascripts/change-style-sheets.shtml
+  var i, link_tag ;
+  for (i = 0, link_tag = document.getElementsByTagName("link") ;
+    i < link_tag.length ; i++ ) {
+    if ((link_tag[i].rel.indexOf( "stylesheet" ) != -1) &&
+      link_tag[i].title) {
+      link_tag[i].disabled = true ;
+      if (link_tag[i].title == css_title) {
+        link_tag[i].disabled = false ;
+      }
+    }
+    set_cookie( style_cookie_name, css_title,
+      style_cookie_duration, style_domain );
+  }
+}
+function set_style_from_cookie()
+{
+  var css_title = get_cookie( style_cookie_name );
+  if (css_title.length) {
+    switch_style( css_title );
+  }
+}
+function set_cookie ( cookie_name, cookie_value,
+    lifespan_in_days, valid_domain )
+{
+    // https://www.thesitewizard.com/javascripts/cookies.shtml
+    var domain_string = valid_domain ?
+                       ("; domain=" + valid_domain) : '' ;
+    document.cookie = cookie_name +
+                       "=" + encodeURIComponent( cookie_value ) +
+                       "; max-age=" + 60 * 60 *
+                       24 * lifespan_in_days +
+                       "; path=/" + domain_string ;
+}
+function get_cookie ( cookie_name )
+{
+    // https://www.thesitewizard.com/javascripts/cookies.shtml
+    var cookie_string = document.cookie ;
+    if (cookie_string.length != 0) {
+        var cookie_value = cookie_string.match (
+                        '(^|;)[\s]*' +
+                        cookie_name +
+                        '=([^;]*)' );
+        return decodeURIComponent ( cookie_value[2] ) ;
+    }
+    return '' ;
+}
+
+</script>
+</html>

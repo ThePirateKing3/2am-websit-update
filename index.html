@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang = "en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Home Page</title>
+  <link rel="stylesheet" href="style.css" title="Normal">
+  <link rel="alternate stylesheet" type="text/css" href="altstyle.css" title="Alternative">
+</head>
+<header>
+  <form>
+    <input type="submit" onclick="switch_style('Normal');return false;" name="theme" value="Defult" id="blue">
+    <input type="submit" onclick="switch_style('Alternative');return false;" name="theme" value="Acssesability" id="pink">
+  </form>
+</header>
+<div class="contrast"></div>
+<h1>Home Page</h1>
+<video class="video" autoplay loop muted poster ="media/back.png">
+  <source src="media/background.mp4" type="video/mp4" >
+  <source src="media/background.ogv" type="video/ogv">
+  <source src="media/background.webm" type="video/webm">
+  <p>Background video of the london eye</p>
+</video>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="discoverylog.html">Discovery Log</a></li>
+      <li><a href="literaturereview.html">Literature Review</a></li>
+      <li><a href="otherstuff.html" >Other Stuff</a></li>
+    </ul>
+  </nav>
+
+
+<img class="norm" src="media/jim.jpg" alt="Jamie looking stupid">
+<img class="norm" src="media/morgan.jpg" alt="Morgan looking stupid">
+<img class="norm" src="media/men.jpg" alt ="Japanies head armor">
+<img class="norm" src="media/fred.jpg" alt="Fred on a mountain">
+
+<footer>
+  <a href="https://www.videvo.net/video/timelapse-of-the-london-eye-at-night/5435">Backgroud video</a>
+  <a href="http://validator.w3.org/check?uri=referer">W3 validator</a>
+</footer>
+</body>
+
+<script lang="Javascript">
+// *** TO BE CUSTOMISED ***
+
+var style_cookie_name = "style" ;
+var style_cookie_duration = 10 ;
+var style_domain = "" ;
+
+// *** END OF CUSTOMISABLE SECTION ***
+// You do not need to customise anything below this line
+
+function switch_style ( css_title )
+{
+// You may use this script on your site free of charge provided
+// you do not remove this notice or the URL below. Script from
+// https://www.thesitewizard.com/javascripts/change-style-sheets.shtml
+  var i, link_tag ;
+  for (i = 0, link_tag = document.getElementsByTagName("link") ;
+    i < link_tag.length ; i++ ) {
+    if ((link_tag[i].rel.indexOf( "stylesheet" ) != -1) &&
+      link_tag[i].title) {
+      link_tag[i].disabled = true ;
+      if (link_tag[i].title == css_title) {
+        link_tag[i].disabled = false ;
+      }
+    }
+    set_cookie( style_cookie_name, css_title,
+      style_cookie_duration, style_domain );
+  }
+}
+function set_style_from_cookie()
+{
+  var css_title = get_cookie( style_cookie_name );
+  if (css_title.length) {
+    switch_style( css_title );
+  }
+}
+function set_cookie ( cookie_name, cookie_value,
+    lifespan_in_days, valid_domain )
+{
+    // https://www.thesitewizard.com/javascripts/cookies.shtml
+    var domain_string = valid_domain ?
+                       ("; domain=" + valid_domain) : '' ;
+    document.cookie = cookie_name +
+                       "=" + encodeURIComponent( cookie_value ) +
+                       "; max-age=" + 60 * 60 *
+                       24 * lifespan_in_days +
+                       "; path=/" + domain_string ;
+}
+function get_cookie ( cookie_name )
+{
+    // https://www.thesitewizard.com/javascripts/cookies.shtml
+    var cookie_string = document.cookie ;
+    if (cookie_string.length != 0) {
+        var cookie_value = cookie_string.match (
+                        '(^|;)[\s]*' +
+                        cookie_name +
+                        '=([^;]*)' );
+        return decodeURIComponent ( cookie_value[2] ) ;
+    }
+    return '' ;
+}
+
+</script>
+</html>

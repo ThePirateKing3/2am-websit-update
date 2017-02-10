@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang = "en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Discovery Log</title>
+  <link rel="stylesheet" href="style.css" title="Normal">
+  <link rel="alternate stylesheet" type="text/css" href="altstyle.css" title="Alternative">
+</head>
+<header>
+  <form>
+    <input type="submit" onclick="switch_style('Normal');return false;" name="theme" value="Defult" id="blue">
+    <input type="submit" onclick="switch_style('Alternative');return false;" name="theme" value="Acssesability" id="pink">
+  </form>
+</header>
+<body onload="set_style_from_cookie()">
+<div class="contrast"></div>
+<h1>Discovery Log</h1>
+<video class="video" autoplay loop muted poster ="media/back.png">
+  <source src="media/background.mp4" type="video/mp4">
+  <source src="media/background.ogv" type="video/ogv">
+  <source src="media/background.webm" type="video/webm">
+    <p>Background video of the london eye</p>
+</video>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="discoverylog.html" class="active">Discovery Log</a></li>
+      <li><a href="literaturereview.html">Literature Review</a></li>
+      <li><a href="otherstuff.html" >Other Stuff</a></li>
+    </ul>
+  </nav>
+<h2>Practical 1 </h2>
+  <p>Created Discovery Log
+  <p>Set up VM with new PW
+  <p>Stared course work in uni G drive access from the stared tab
+  <p>Submitted to the website awards
+  <p>Found extended reading PDF on moodle
+
+<h2>Practical 2 </h2>
+  <p>Answering Questions about security
+
+<h2>Practical 3 </h2>
+  <p>Start researching for the Literature review
+  <p>Search terms;
+
+  <p>mitigation or reduction or reducing
+  <p>Risk of or cause of
+  <p>Personal information
+  <p>WiFi or wifi or wireless networks or  public wifi or free wifi
+
+<h2>Practical 4 </h2>
+  <p>reviewing litriture
+<h2>Practical 5 </h2>
+  <p>Achademic wirting
+<h2>Practical 6 </h2>
+  <p>Reading week
+  <p>Worked on lit review
+
+<h2>  Practical 7 </h2>
+  <p>Start with &lt;!doctype html&gt; not &lt;html&gt; and no need to end with &lt;/html&gt; or &lt;/!doctype html&gt;
+
+  <h2>Practical 8 </h2>
+  <p>Keeping the style of the webpage away from the content so that style and content can be changed independently without affecting the other
+  <h2>Practical 9 </h2>
+  <p>Different linking styles using either absolute( using http:// in html for external links) or relative ( just media/image.svg) reference
+
+  <h2>Practical 10 </h2>
+  <p>Using images
+
+  Always use alt Attributes
+  Can use viewport or % for width or height
+  Leaving one will keep aspect ratio
+
+  <h2>Practical 11 </h2>
+  <p>Streaming the process of writing the HTML Using tools like emmit and Multiple Cursors
+  Adding useful snippets to atom
+
+  <h2>Practical 12 </h2>
+  <p>Drop in Session
+
+  <h2>Practical 13</h2>
+  <p>Sorting out different item into a list for the hyracical degsing of a web site
+  <p> not always 1 right answer
+
+  <h2>Practical 14</h2>
+  <p>looking at how usabitiy can brake a program or lead to its sucsess.
+
+  <h2>Practical 15</h2>
+  <p>palying around with jacek's stick men and seeing how it can be broken
+
+  <h2>Practical 16</h2>
+  <p>Validatet website using the w3 validator fix some quirqs in the code and compressed the video background to resonable sizes
+  <p>To add alt tags to video use the p tag as the last tag in video
+  <p> evan with a &lt;!doctype html&gt; you can still put  &lt;html&gt; and in the tag assing the language of the page
+
+  <h2>Practical 17</h2>
+  <p>
+
+  <h2>Practical 18</h2>
+  <p>
+
+  <h2>Practical 19</h2>
+  <p>
+
+  <h2>Practical 20</h2>
+  <p>
+
+  <h2>Practical 21</h2>
+  <p>
+
+  <h2>Practical 22</h2>
+  <p>
+
+  <h2>Practical 23</h2>
+  <p>
+
+  <h2>Practical 24</h2>
+  <p>
+
+<footer>
+  <a href="https://www.videvo.net/video/timelapse-of-the-london-eye-at-night/5435">Backgroud video</a>
+  <a href="http://validator.w3.org/check?uri=referer">W3 validator</a>
+</footer>
+</body>
+
+<script lang="Javascript">
+// *** TO BE CUSTOMISED ***
+
+var style_cookie_name = "style" ;
+var style_cookie_duration = 10 ;
+var style_domain = "" ;
+
+// *** END OF CUSTOMISABLE SECTION ***
+// You do not need to customise anything below this line
+
+function switch_style ( css_title )
+{
+// You may use this script on your site free of charge provided
+// you do not remove this notice or the URL below. Script from
+// https://www.thesitewizard.com/javascripts/change-style-sheets.shtml
+  var i, link_tag ;
+  for (i = 0, link_tag = document.getElementsByTagName("link") ;
+    i < link_tag.length ; i++ ) {
+    if ((link_tag[i].rel.indexOf( "stylesheet" ) != -1) &&
+      link_tag[i].title) {
+      link_tag[i].disabled = true ;
+      if (link_tag[i].title == css_title) {
+        link_tag[i].disabled = false ;
+      }
+    }
+    set_cookie( style_cookie_name, css_title,
+      style_cookie_duration, style_domain );
+  }
+}
+function set_style_from_cookie()
+{
+  var css_title = get_cookie( style_cookie_name );
+  if (css_title.length) {
+    switch_style( css_title );
+  }
+}
+function set_cookie ( cookie_name, cookie_value,
+    lifespan_in_days, valid_domain )
+{
+    // https://www.thesitewizard.com/javascripts/cookies.shtml
+    var domain_string = valid_domain ?
+                       ("; domain=" + valid_domain) : '' ;
+    document.cookie = cookie_name +
+                       "=" + encodeURIComponent( cookie_value ) +
+                       "; max-age=" + 60 * 60 *
+                       24 * lifespan_in_days +
+                       "; path=/" + domain_string ;
+}
+function get_cookie ( cookie_name )
+{
+    // https://www.thesitewizard.com/javascripts/cookies.shtml
+    var cookie_string = document.cookie ;
+    if (cookie_string.length != 0) {
+        var cookie_value = cookie_string.match (
+                        '(^|;)[\s]*' +
+                        cookie_name +
+                        '=([^;]*)' );
+        return decodeURIComponent ( cookie_value[2] ) ;
+    }
+    return '' ;
+}
+
+</script>
+</html>
