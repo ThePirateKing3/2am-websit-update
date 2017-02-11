@@ -89,3 +89,21 @@ footer{
       margin-left: 22.5vw;
       margin-right: 0.25vw;
     }
+    @media (max-width: 65em) {
+
+      footer{
+        position:relative;
+        width:96vw;
+        font-size:0.7em;
+        }
+        header input{
+          width: 20vw;
+          height: 2.5vh;
+          display:grid;
+        }
+        body{
+          margin:2vw;
+          margin-top: 0;
+          position: relative;
+          z-index: 3;
+        }
