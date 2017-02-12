@@ -3,13 +3,18 @@ visibility: hidden;
 }
 .video{
   visibility: hidden;
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
 }
 .animation{
   visibility: hidden;
   width: 0;
   height: 0;
+}
+#discoveryLog{
+visibility: hidden;
+width: 0;
+height: 0;
 }
 footer{
     position: fixed;

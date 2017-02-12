@@ -154,6 +154,11 @@ p{
   margin: 0.7em;
   text-align: justify;
 }
+#discoveryLog{
+  margin-top:1em;
+  font-size: 0.7em;
+  display: flex;
+}
 
 @media (max-width: 65em) {
 
@@ -222,8 +227,12 @@ header{
   padding:0;
   background-color: #bc3931;
 }
+#discoveryLog{
+  display: grid;
+}
 
 }
+
 
 
 .animation{
